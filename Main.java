@@ -51,19 +51,21 @@ public class Main {
         int noc=0;
         int noc1;
         int nop;
+        System.out.println("You are going to bat now");
         while(true){
             System.out.print("Enter between 1 to 6 : ");
             score=s.nextInt();
             if(score<=6){
             noc=r.nextInt(6)+1;
             if (score==noc){
-                System.out.println("Computer played: "+noc+" So YOU ARE OUT");
+                System.out.println("\n****You Are out****\n");
+                System.out.println("Computer played: "+noc+" ");
                 System.out.println("You Scored Totally "+total+" Runs");
                 break;
             }else{
                 System.out.println("Computer Played: "+noc);
                 total+=score;
-                System.out.println("Runs="+total);
+                System.out.println("Your Score = "+total);
             }
             }else{
                 System.out.println("Enter Correctly");
@@ -79,7 +81,7 @@ public class Main {
             ctotal+=noc1;
             if(nop==noc1 && ctotal<total){
                 System.out.println("Computer Played "+noc1);
-                System.out.println("Computer looses and You Win");
+                System.out.println("Computer loose and You Win");
                 System.out.println("You Won by "+(total-ctotal)+" Runs");
                 break;
             }else if(ctotal==total || ctotal>total){
@@ -116,7 +118,7 @@ public class Main {
             }else{
                 System.out.println("Computer Played: "+noc);
                 total+=noc;
-                System.out.println("Runs = "+total);
+                System.out.println("Computer Score = "+total);
             }
 
         }
@@ -137,14 +139,14 @@ public class Main {
             }else if(ctotal==total || ctotal>total){
                 System.out.println("****Congratulations****");
                 System.out.println("You Won the Game");
-                System.out.println("You Played "+nop1);
+                System.out.println("Computer Played "+noc);
                 System.out.println("You Chased Successfully and Scored "+(ctotal)+" Runs");
                 break;
             }
             else{
 
                 System.out.println("You Played "+nop1);
-                System.out.println("Total Score = "+ctotal+" Runs and remaining = "+(total-ctotal)+" Runs");
+                System.out.println("Computer Score = "+ctotal+" Runs and remaining = "+(total-ctotal)+" Runs");
             }
         }
     }
